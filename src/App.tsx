@@ -19,7 +19,6 @@ import SectionHeader from "./components/SectionHeader";
 import StatCard from "./components/StatCard";
 import SkillChip from "./components/SkillChip";
 import GithubContributionSection from "./components/GithubContributionSection";
-import { Analytics } from "@vercel/analytics/react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -86,7 +85,6 @@ const Navbar = () => {
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-[#EAEAEA]">
-      <Analytics />
       <Navbar />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-8 pt-20">

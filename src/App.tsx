@@ -39,42 +39,106 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 border-b",
-        scrolled
-          ? "bg-background/80 backdrop-blur-xl border-outline/20 py-4 shadow-[0_0_20px_rgba(0,255,163,0.05)]"
-          : "bg-transparent border-transparent py-6",
+        "fixed top-0 w-full z-50 transition-all duration-500",
+        scrolled ? "py-4" : "py-6",
       )}
     >
-      <div className="max-w-screen-2xl mx-auto px-8 flex justify-between items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="text-xl font-bold font-mono text-primary-accent tracking-tighter uppercase"
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
+        <div
+          className={cn(
+            "flex justify-between items-center rounded-2xl border transition-all duration-500",
+            scrolled
+              ? `
+            bg-white/5
+            backdrop-blur-2xl
+            border-white/10
+            shadow-[0_8px_32px_rgba(0,0,0,0.25)]
+            supports-backdrop-filter:bg-white/5
+          `
+              : `
+            bg-white/3
+            backdrop-blur-xl
+            border-white/6
+          `,
+          )}
         >
-          Abhinav_
-        </motion.div>
-
-        <div className="hidden md:flex gap-8 items-center">
-          {navLinks.map((link, i) => (
-            <motion.a
-              key={link.name}
-              href={link.href}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="font-mono text-sm text-muted hover:text-primary-accent transition-colors"
+          <div className="w-full px-6 py-4 flex justify-between items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="
+            text-xl
+            font-bold
+            font-mono
+            tracking-tighter
+            uppercase
+            text-white
+            drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]
+          "
             >
-              <span className="opacity-50">// {link.id}.</span> {link.name}
-            </motion.a>
-          ))}
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4 }}
-            className="bg-primary-accent text-background px-4 py-2 font-mono text-sm font-bold active:scale-95 transition-transform"
-          >
-            &gt; console.log
-          </motion.button>
+              <span className="text-primary-accent">Abhinav</span>_
+            </motion.div>
+
+            <div className="hidden md:flex gap-4 items-center">
+              {navLinks.map((link, i) => (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                  className="
+                relative
+                px-4
+                py-2
+                rounded-xl
+                font-mono
+                text-sm
+                text-white/70
+                border
+                border-transparent
+                hover:text-white
+                hover:bg-white/5
+                hover:border-white/10
+                transition-all
+                duration-300
+              "
+                >
+                  <span className="opacity-40">// {link.id}.</span> {link.name}
+                </motion.a>
+              ))}
+
+              <motion.button
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 }}
+                className="
+              relative
+              overflow-hidden
+              rounded-xl
+              border
+              border-primary-accent/30
+              bg-primary-accent/10
+              backdrop-blur-xl
+              px-5
+              py-2.5
+              font-mono
+              text-sm
+              font-bold
+              text-primary-accent
+              shadow-[0_0_20px_rgba(0,255,163,0.15)]
+              hover:bg-primary-accent/20
+              hover:shadow-[0_0_30px_rgba(0,255,163,0.25)]
+              active:scale-95
+              transition-all
+              duration-300
+            "
+              >
+                <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition-opacity" />
+                <span className="relative z-10">&gt; console.log</span>
+              </motion.button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -98,8 +162,8 @@ export default function App() {
         </div>
 
         {/* Glow Effects */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-accent/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-accent/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-150 h-150 bg-primary-accent/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-150 h-150 bg-primary-accent/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2" />
 
         <div className="relative z-10 text-center space-y-8">
           <motion.h1
@@ -110,37 +174,203 @@ export default function App() {
             Abhinav_<span className="cursor-blink">|</span>
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-lg md:text-xl font-mono text-muted max-w-2xl mx-auto leading-relaxed"
+            className="flex justify-center px-4"
           >
-            <span className="text-primary-accent">//</span> Backend Engineer ·
-            Node.js · AWS · Docker · Redis
-          </motion.p>
+            <div
+              className="
+      relative
+      overflow-hidden
+      w-full
+      max-w-fit
+      rounded-2xl
+      border
+      border-white/10
+      bg-white/4
+      backdrop-blur-2xl
+      py-4
+      md:px-6
+      shadow-[0_8px_32px_rgba(0,0,0,0.25)]
+      supports-backdrop-filter:bg-white/4
+    "
+            >
+              {/* subtle glass reflection */}
+              <div
+                className="
+        absolute
+        inset-0
+        bg-linear-to-br
+        from-white/10
+        via-transparent
+        to-transparent
+        pointer-events-none
+      "
+              />
+
+              <motion.div
+                className="
+        relative
+        z-10
+        flex
+        flex-wrap
+        items-center
+        justify-center
+        gap-x-2
+        gap-y-2
+        text-sm
+        md:text-lg
+        font-mono
+        text-white/75
+        leading-relaxed
+        tracking-wide
+        text-center
+      "
+              >
+                <span className="text-primary-accent">//</span>
+
+                <span className="hover:text-white transition-colors duration-300">
+                  Backend Engineer
+                </span>
+
+                <span className="text-white/20 hidden sm:inline">·</span>
+
+                <span className="hover:text-white transition-colors duration-300">
+                  Node.js
+                </span>
+
+                <span className="text-white/20 hidden sm:inline">·</span>
+
+                <span className="hover:text-white transition-colors duration-300">
+                  AWS
+                </span>
+
+                <span className="text-white/20 hidden sm:inline">·</span>
+
+                <span className="hover:text-white transition-colors duration-300">
+                  Docker
+                </span>
+
+                <span className="text-white/20 hidden sm:inline">·</span>
+
+                <span className="hover:text-white transition-colors duration-300">
+                  Redis
+                </span>
+              </motion.div>
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="flex flex-col md:flex-row items-center justify-center gap-4 pt-6"
+            className="flex flex-col md:flex-row items-center justify-center gap-5 pt-8"
           >
+            {/* Primary Button */}
             <a
               href="#projects"
-              className="w-full md:w-auto px-8 py-4 bg-primary-accent text-background font-mono font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2"
+              className="
+      group
+      relative
+      overflow-hidden
+      md:w-auto
+      rounded-2xl
+      border
+      border-primary-accent/20
+      bg-primary-accent/10
+      backdrop-blur-2xl
+      px-8
+      py-4
+      font-mono
+      font-bold
+      text-primary-accent
+      shadow-[0_8px_32px_rgba(0,255,163,0.12)]
+      hover:bg-primary-accent/20
+      hover:shadow-[0_0_35px_rgba(0,255,163,0.25)]
+      active:scale-[0.98]
+      transition-all
+      duration-300
+      flex
+      items-center
+      justify-center
+      gap-3
+    "
             >
-              <Terminal size={18} />
-              &gt; View Projects
+              {/* glass reflection */}
+              <span
+                className="
+        absolute
+        inset-0
+        bg-linear-to-br
+        from-white/15
+        via-transparent
+        to-transparent
+        opacity-70
+        pointer-events-none
+      "
+              />
+
+              <Terminal
+                size={18}
+                className="relative z-10 transition-transform duration-300 group-hover:rotate-6"
+              />
+
+              <span className="relative z-10">&gt; View Projects</span>
             </a>
+
+            {/* Secondary Button */}
             <a
               href="https://drive.google.com/file/d/1OiMRLJkQVnhNbErYbsAwlJjJVLBDcojd/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full md:w-auto px-8 py-4 border border-outline/30 text-primary-accent font-mono hover:bg-primary-accent/5 transition-all flex items-center justify-center gap-2"
+              className="
+      group
+      relative
+      overflow-hidden
+      md:w-auto
+      rounded-2xl
+      border
+      border-white/10
+      bg-white/4
+      backdrop-blur-2xl
+      px-8
+      py-4
+      font-mono
+      text-white/80
+      shadow-[0_8px_32px_rgba(0,0,0,0.18)]
+      hover:bg-white/[0.07]
+      hover:border-primary-accent/20
+      hover:text-primary-accent
+      active:scale-[0.98]
+      transition-all
+      duration-300
+      flex
+      items-center
+      justify-center
+      gap-3
+    "
             >
-              <Download size={18} />
-              Download Resume
+              {/* glass reflection */}
+              <span
+                className="
+        absolute
+        inset-0
+        bg-linear-to-br
+        from-white/10
+        via-transparent
+        to-transparent
+        pointer-events-none
+      "
+              />
+
+              <Download
+                size={18}
+                className="relative z-10 transition-transform duration-300 group-hover:-translate-y-0.5"
+              />
+
+              <span className="relative z-10">Download Resume</span>
             </a>
           </motion.div>
         </div>
@@ -148,7 +378,7 @@ export default function App() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted/30"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted"
         >
           <ChevronDown size={32} />
         </motion.div>
@@ -192,7 +422,7 @@ export default function App() {
           viewport={{ once: true }}
           className="grid grid-cols-2 gap-4"
         >
-          <StatCard value="1.3+" label="years of heavy coding" highlight />
+          <StatCard value="1.5+" label="years of heavy coding" highlight />
           <StatCard value="1200+" label="commits pushed" />
           <StatCard value="99.9%" label="percent uptime target" />
           <StatCard value="5+" label="modules built" />
@@ -278,7 +508,7 @@ export default function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-28 px-8 max-w-7xl mx-auto">
+      <section id="projects" className="py-28 px-8">
         <SectionHeader
           id="03"
           title="built_with_logic"
@@ -377,83 +607,295 @@ export default function App() {
         </div>
       </section>
 
-      <section id="contribution" className="px-8 bg-[#070708] justify-center">
+      <section
+        id="contribution"
+        className="py-28 px-8 bg-[#070708] justify-center"
+      >
         <GithubContributionSection />
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-32 px-8">
-        <div className="max-w-screen-md mx-auto text-center space-y-12">
-          <SectionHeader
-            id="05"
-            title="initiate_handshake"
-            subtitle="Let's build something."
-          />
+      <section id="contact" className="relative py-28 px-8 overflow-hidden">
+        {/* ambient glow */}
+        <div
+          className="
+      absolute
+      top-20
+      left-1/2
+      -translate-x-1/2
+      h-72
+      w-72
+      rounded-full
+      bg-primary-accent/10
+      blur-3xl
+      opacity-70
+      pointer-events-none
+    "
+        />
 
-          <p className="text-muted text-lg">
-            I'm currently looking for new opportunities to solve complex
-            technical challenges. Whether you have a question or just want to
-            talk shop, my inbox is open.
-          </p>
+        <div className=" relative z-10">
+          <div
+            className="
+        relative
+        overflow-hidden
+        rounded-4xl
+        border
+        border-white/10
+        bg-white/4
+        backdrop-blur-2xl
+        px-8
+        py-14
+        md:px-14
+        shadow-[0_15px_60px_rgba(0,0,0,0.25)]
+      "
+          >
+            {/* glass reflection */}
+            <div
+              className="
+          absolute
+          inset-0
+          bg-linear-to-br
+          from-white/10
+          via-transparent
+          to-transparent
+          pointer-events-none
+        "
+            />
 
-          <div className="flex flex-col gap-8 items-center pt-8">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              href="mailto:abhinavmaurya476@gmail.com"
-              className="group font-mono text-l md:text-4xl text-primary-accent flex items-center gap-4 hover:opacity-80 transition-all"
-            >
-              <Mail size={32} />
-              abhinavmaurya476@gmail.com
-            </motion.a>
+            <div className="relative z-10 text-center space-y-12">
+              <SectionHeader
+                id="05"
+                title="initiate_handshake"
+                subtitle="Let's build something."
+              />
 
-            <div className="flex flex-wrap justify-center gap-8 pt-8">
-              {[
-                {
-                  name: "github",
-                  icon: <Terminal size={18} />,
-                  href: "https://github.com/abhinav2-3",
-                  target: "_blank",
-                },
-                {
-                  name: "linkedin",
-                  icon: <Globe size={18} />,
-                  href: "https://www.linkedin.com/in/abhinav-maurya-02b7b225b/",
-                  target: "_blank",
-                },
-                {
-                  name: "twitter",
-                  icon: <MessageSquare size={18} />,
-                  href: "https://x.com/Abhinav_2_3",
-                  target: "_blank",
-                },
-              ].map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target={social.target}
-                  rel="noopener noreferrer"
-                  className="text-muted hover:text-primary-accent font-mono text-sm uppercase tracking-widest flex items-center gap-2 transition-colors"
+              <p
+                className="
+            text-white/65
+            text-lg
+            leading-relaxed
+            max-w-2xl
+            mx-auto
+          "
+              >
+                I'm currently looking for new opportunities to solve complex
+                technical challenges. Whether you have a question or just want
+                to talk shop, my inbox is open.
+              </p>
+
+              <div className="flex flex-col gap-10 items-center pt-4">
+                {/* email glass card */}
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  href="mailto:abhinavmaurya476@gmail.com"
+                  className="
+              group
+              relative
+              overflow-hidden
+              rounded-2xl
+              border
+              border-primary-accent/20
+              bg-primary-accent/5
+              backdrop-blur-2xl
+              px-6
+              py-5
+              md:px-10
+              shadow-[0_0_35px_rgba(0,255,163,0.08)]
+              hover:bg-primary-accent/10
+              hover:shadow-[0_0_45px_rgba(0,255,163,0.18)]
+              transition-all
+              duration-500
+            "
                 >
-                  {social.icon} {social.name}
-                </a>
-              ))}
+                  {/* reflection */}
+                  <div
+                    className="
+                absolute
+                inset-0
+                bg-linear-to-br
+                from-white/10
+                via-transparent
+                to-transparent
+                pointer-events-none
+              "
+                  />
+
+                  <div
+                    className="
+                relative
+                z-10
+                font-mono
+                text-sm
+                md:text-2xl
+                lg:text-3xl
+                text-primary-accent
+                flex
+                items-center
+                gap-4
+                break-all
+              "
+                  >
+                    <Mail
+                      size={30}
+                      className="group-hover:rotate-6 transition-transform duration-300"
+                    />
+                    abhinavmaurya476@gmail.com
+                  </div>
+                </motion.a>
+
+                {/* socials */}
+                <div className="flex flex-wrap justify-center gap-5 pt-2">
+                  {[
+                    {
+                      name: "github",
+                      icon: <Terminal size={18} />,
+                      href: "https://github.com/abhinav2-3",
+                      target: "_blank",
+                    },
+                    {
+                      name: "linkedin",
+                      icon: <Globe size={18} />,
+                      href: "https://www.linkedin.com/in/abhinav-maurya-02b7b225b/",
+                      target: "_blank",
+                    },
+                    {
+                      name: "twitter",
+                      icon: <MessageSquare size={18} />,
+                      href: "https://x.com/Abhinav_2_3",
+                      target: "_blank",
+                    },
+                  ].map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target={social.target}
+                      rel="noopener noreferrer"
+                      className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-full
+                  border
+                  border-white/10
+                  bg-white/[0.04]
+                  backdrop-blur-xl
+                  px-5
+                  py-3
+                  text-white/65
+                  hover:text-primary-accent
+                  hover:border-primary-accent/20
+                  hover:bg-primary-accent/5
+                  transition-all
+                  duration-300
+                  flex
+                  items-center
+                  gap-3
+                  font-mono
+                  text-xs
+                  uppercase
+                  tracking-[0.25em]
+                  shadow-[0_6px_25px_rgba(0,0,0,0.12)]
+                "
+                    >
+                      <span
+                        className="
+                    absolute
+                    inset-0
+                    bg-gradient-to-br
+                    from-white/10
+                    via-transparent
+                    to-transparent
+                    pointer-events-none
+                  "
+                      />
+
+                      <span className="relative z-10">{social.icon}</span>
+
+                      <span className="relative z-10">{social.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="w-full py-12 border-t border-outline/10 bg-background">
-        <div className="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-white font-bold font-mono tracking-tighter text-xl">
-            Abhinav_
+      <footer
+        className="
+    relative
+    overflow-hidden
+    py-10
+    px-8
+    border-t
+    border-white/10
+    bg-white/2
+    backdrop-blur-2xl
+  "
+      >
+        {/* subtle top glow */}
+        <div
+          className="
+      absolute
+      top-0
+      left-1/2
+      -translate-x-1/2
+      h-px
+      w-1/2
+      bg-primary-accent/20
+      blur-sm
+    "
+        />
+
+        <div
+          className="
+      max-w-screen-2xl
+      mx-auto
+      flex
+      flex-col
+      md:flex-row
+      justify-between
+      items-center
+      gap-8
+      relative
+      z-10
+    "
+        >
+          <div
+            className="
+        text-white
+        font-bold
+        font-mono
+        tracking-tight
+        text-2xl
+        drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]
+      "
+          >
+            <span className="text-primary-accent">Abhinav</span>_
           </div>
 
-          <div className="text-muted font-mono text-[10px] uppercase tracking-widest">
+          <div
+            className="
+        text-white/40
+        font-mono
+        text-[10px]
+        uppercase
+        tracking-[0.3em]
+      "
+          >
             // {new Date().getFullYear()}. built_with_logic
           </div>
 
-          <div className="text-muted font-mono text-[10px] uppercase tracking-widest">
+          <div
+            className="
+        text-white/40
+        font-mono
+        text-[10px]
+        uppercase
+        tracking-[0.3em]
+      "
+          >
             Designed & Built by Abhinav
           </div>
         </div>

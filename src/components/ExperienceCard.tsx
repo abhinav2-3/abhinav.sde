@@ -17,7 +17,7 @@ const ExperienceItem = ({
 }) => (
   <div
     className={cn(
-      "relative mb-20 md:flex items-center justify-between gap-10",
+      "relative mb-10 md:mb-16 last:mb-0 md:flex items-center justify-between gap-6 md:gap-10",
       reverse && "md:flex-row-reverse",
     )}
   >

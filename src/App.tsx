@@ -170,9 +170,9 @@ export default function App() {
       <Navbar navigation={navigation} handle={profile.handle} />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-8 pt-20">
+      <section className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 md:px-8 pt-20 pb-8 md:pb-12">
         {/* Background Watermark */}
-        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none select-none font-mono text-[10px] leading-relaxed overflow-hidden p-10">
+        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none select-none font-mono text-[10px] leading-relaxed overflow-hidden p-6 md:p-10">
           {Array.from({ length: 20 }).map((_, i) => (
             <div key={i} className="whitespace-nowrap">
               {watermarkString.repeat(3)}
@@ -184,11 +184,11 @@ export default function App() {
         <div className="absolute top-0 right-0 w-150 h-150 bg-primary-accent/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-150 h-150 bg-primary-accent/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2" />
 
-        <div className="relative z-10 text-center space-y-8">
+        <div className="relative z-10 text-center space-y-6 md:space-y-8">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-mono text-6xl md:text-9xl font-bold text-primary-accent tracking-tighter"
+            className="font-mono text-5xl sm:text-6xl md:text-9xl font-bold text-primary-accent tracking-tighter"
           >
             <TerminalScramble
               text={profile.handle}
@@ -203,7 +203,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="flex justify-center px-4"
+            className="flex justify-center px-2"
           >
             <div
               className="
@@ -216,8 +216,10 @@ export default function App() {
                 border-white/10
                 bg-white/4
                 backdrop-blur-2xl
-                py-4
-                px-6
+                py-3.5
+                px-4
+                md:py-4
+                md:px-6
                 shadow-[0_8px_32px_rgba(0,0,0,0.25)]
                 supports-backdrop-filter:bg-white/4
               "
@@ -244,8 +246,9 @@ export default function App() {
                   items-center
                   justify-center
                   gap-x-2
-                  gap-y-2
-                  text-sm
+                  gap-y-1.5
+                  text-xs
+                  sm:text-sm
                   md:text-lg
                   font-mono
                   text-white/75
@@ -273,7 +276,7 @@ export default function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="flex flex-col md:flex-row items-center justify-center gap-5 pt-8"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 md:pt-6"
           >
             {/* Primary Button */}
             <a
@@ -282,14 +285,17 @@ export default function App() {
                 group
                 relative
                 overflow-hidden
-                md:w-auto
+                w-full
+                sm:w-auto
                 rounded-2xl
                 border
                 border-primary-accent/20
                 bg-primary-accent/10
                 backdrop-blur-2xl
-                px-8
-                py-4
+                px-6
+                py-3.5
+                md:px-8
+                md:py-4
                 font-mono
                 font-bold
                 text-primary-accent
@@ -333,14 +339,17 @@ export default function App() {
                 group
                 relative
                 overflow-hidden
-                md:w-auto
+                w-full
+                sm:w-auto
                 rounded-2xl
                 border
                 border-white/10
                 bg-white/4
                 backdrop-blur-2xl
-                px-8
-                py-4
+                px-6
+                py-3.5
+                md:px-8
+                md:py-4
                 font-mono
                 text-white/80
                 shadow-[0_8px_32px_rgba(0,0,0,0.18)]
@@ -377,35 +386,35 @@ export default function App() {
         </div>
 
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted"
+          className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 text-muted"
         >
-          <ChevronDown size={32} />
+          <ChevronDown size={28} />
         </motion.div>
       </section>
 
       {/* About Section */}
       <section
         id="about"
-        className="py-32 px-8 max-w-screen-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"
+        className="py-10 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 max-w-screen-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start"
       >
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="space-y-8"
+          className="space-y-6 md:space-y-8"
         >
           <SectionHeader
             id={about.id}
             title={about.title}
             subtitle={about.subtitle}
           />
-          <p className="text-muted text-lg leading-relaxed">{about.bio}</p>
-          <div className="pt-4">
-            <div className="inline-flex items-center gap-3 p-4 bg-surface border border-outline/20">
-              <div className="w-3 h-3 bg-primary-accent rounded-full shadow-[0_0_10px_#00FFA3]" />
-              <span className="font-mono text-sm">{about.currentStatus}</span>
+          <p className="text-muted text-base md:text-lg leading-relaxed">{about.bio}</p>
+          <div className="pt-2">
+            <div className="inline-flex items-center gap-3 p-3.5 md:p-4 bg-surface border border-outline/20 rounded-xl">
+              <div className="w-2.5 h-2.5 bg-primary-accent rounded-full shadow-[0_0_10px_#00FFA3]" />
+              <span className="font-mono text-xs md:text-sm">{about.currentStatus}</span>
             </div>
           </div>
         </motion.div>
@@ -414,7 +423,7 @@ export default function App() {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 gap-4"
+          className="grid grid-cols-2 gap-3 md:gap-4"
         >
           {about.stats.map((stat) => (
             <StatCard
@@ -428,30 +437,30 @@ export default function App() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-32 px-8 bg-[#070708]">
-        <div className="max-w-screen-7xl mx-auto space-y-16">
+      <section id="skills" className="py-10 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 bg-[#070708]">
+        <div className="max-w-screen-7xl mx-auto space-y-8 md:space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <SectionHeader
               id={skills.id}
               title={skills.title}
               subtitle={skills.subtitle}
             />
-            <div className="text-muted font-mono text-xs mb-12 md:mb-0">
+            <div className="text-muted font-mono text-xs mb-4 md:mb-0">
               LOAD_VERSION: {skills.version}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             {skills.categories.map((cat) => (
-              <div key={cat.name} className="space-y-6">
-                <h3 className="font-mono font-bold flex items-center gap-2">
+              <div key={cat.name} className="space-y-4 md:space-y-5">
+                <h3 className="font-mono font-bold flex items-center gap-2 text-sm md:text-base">
                   {renderPortfolioIcon(cat.icon, {
                     size: 16,
                     className: "text-primary-accent",
                   })}
                   {cat.name}
                 </h3>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2.5">
                   {cat.skills.map((s) => (
                     <SkillChip key={s} name={s} />
                   ))}
@@ -463,14 +472,14 @@ export default function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-28 px-8">
+      <section id="projects" className="py-10 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 max-w-screen-7xl mx-auto">
         <SectionHeader
           id={projects.id}
           title={projects.title}
           subtitle={projects.subtitle}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.items.map((proj) => (
             <ProjectCard key={proj.id} {...proj} />
           ))}
@@ -478,7 +487,7 @@ export default function App() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-28 px-8 bg-[#070708]">
+      <section id="experience" className="py-10 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 bg-[#070708]">
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             id={experience.id}
@@ -486,7 +495,7 @@ export default function App() {
             subtitle={experience.subtitle}
           />
 
-          <div className="relative pl-8 md:pl-0 mt-16">
+          <div className="relative pl-6 md:pl-0 mt-8 md:mt-12">
             <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-outline -translate-x-1/2 hidden md:block" />
 
             {experience.items.map((item) => (
@@ -507,13 +516,13 @@ export default function App() {
       {/* GitHub Contribution Section */}
       <section
         id="contribution"
-        className="py-28 px-8 bg-[#070708] justify-center"
+        className="py-8 md:py-14 px-4 sm:px-6 md:px-8 bg-[#070708] justify-center"
       >
         <GithubContributionSection />
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative py-28 px-8 overflow-hidden">
+      <section id="contact" className="relative py-10 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 overflow-hidden">
         {/* ambient glow */}
         <div
           className="
@@ -536,14 +545,16 @@ export default function App() {
             className="
               relative
               overflow-hidden
-              rounded-4xl
+              rounded-3xl
+              md:rounded-4xl
               border
               border-white/10
               bg-white/4
               backdrop-blur-2xl
-              px-8
-              py-14
+              px-5
+              py-8
               md:px-14
+              md:py-12
               shadow-[0_15px_60px_rgba(0,0,0,0.25)]
             "
           >
@@ -560,7 +571,7 @@ export default function App() {
               "
             />
 
-            <div className="relative z-10 text-center space-y-12">
+            <div className="relative z-10 text-center space-y-8 md:space-y-10">
               <SectionHeader
                 id={contact.id}
                 title={contact.title}
@@ -570,7 +581,8 @@ export default function App() {
               <p
                 className="
                   text-white/65
-                  text-lg
+                  text-base
+                  md:text-lg
                   leading-relaxed
                   max-w-2xl
                   mx-auto
@@ -579,7 +591,7 @@ export default function App() {
                 {contact.description}
               </p>
 
-              <div className="flex flex-col gap-10 items-center pt-4">
+              <div className="flex flex-col gap-6 md:gap-8 items-center pt-2">
                 {/* email glass card */}
                 <motion.a
                   whileHover={{ scale: 1.03 }}
@@ -593,9 +605,10 @@ export default function App() {
                     border-primary-accent/20
                     bg-primary-accent/5
                     backdrop-blur-2xl
-                    px-6
-                    py-5
+                    px-5
+                    py-4
                     md:px-10
+                    md:py-5
                     shadow-[0_0_35px_rgba(0,255,163,0.08)]
                     hover:bg-primary-accent/10
                     hover:shadow-[0_0_45px_rgba(0,255,163,0.18)]
@@ -620,26 +633,28 @@ export default function App() {
                       relative
                       z-10
                       font-mono
-                      text-sm
+                      text-xs
+                      sm:text-sm
                       md:text-2xl
                       lg:text-3xl
                       text-primary-accent
                       flex
                       items-center
-                      gap-4
+                      gap-3
+                      md:gap-4
                       break-all
                     "
                   >
                     <Mail
-                      size={30}
-                      className="group-hover:rotate-6 transition-transform duration-300"
+                      size={24}
+                      className="group-hover:rotate-6 transition-transform duration-300 md:w-[30px] md:h-[30px]"
                     />
                     {contact.email}
                   </div>
                 </motion.a>
 
                 {/* socials */}
-                <div className="flex flex-wrap justify-center gap-5 pt-2">
+                <div className="flex flex-wrap justify-center gap-3 md:gap-5 pt-1">
                   {contact.socials.map((social) => (
                     <a
                       key={social.name}
@@ -655,8 +670,10 @@ export default function App() {
                         border-white/10
                         bg-white/4
                         backdrop-blur-xl
-                        px-5
-                        py-3
+                        px-4
+                        py-2.5
+                        md:px-5
+                        md:py-3
                         text-white/65
                         hover:text-primary-accent
                         hover:border-primary-accent/20
@@ -665,11 +682,14 @@ export default function App() {
                         duration-300
                         flex
                         items-center
-                        gap-3
+                        gap-2.5
+                        md:gap-3
                         font-mono
-                        text-xs
+                        text-[11px]
+                        md:text-xs
                         uppercase
-                        tracking-[0.25em]
+                        tracking-[0.2em]
+                        md:tracking-[0.25em]
                         shadow-[0_6px_25px_rgba(0,0,0,0.12)]
                       "
                     >
@@ -685,7 +705,7 @@ export default function App() {
                         "
                       />
                       <span className="relative z-10">
-                        {renderPortfolioIcon(social.icon, { size: 18 })}
+                        {renderPortfolioIcon(social.icon, { size: 16 })}
                       </span>
                       <span className="relative z-10">{social.name}</span>
                     </a>
@@ -702,8 +722,10 @@ export default function App() {
         className="
           relative
           overflow-hidden
-          py-10
-          px-8
+          py-8
+          px-4
+          sm:px-6
+          md:px-8
           border-t
           border-white/10
           bg-white/2
@@ -732,7 +754,8 @@ export default function App() {
             md:flex-row
             justify-between
             items-center
-            gap-8
+            gap-6
+            md:gap-8
             relative
             z-10
           "
@@ -743,7 +766,8 @@ export default function App() {
               font-bold
               font-mono
               tracking-tight
-              text-2xl
+              text-xl
+              md:text-2xl
               drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]
             "
           >
@@ -778,3 +802,4 @@ export default function App() {
     </div>
   );
 }
+

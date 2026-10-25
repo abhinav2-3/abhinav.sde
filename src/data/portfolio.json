@@ -8,23 +8,23 @@
       "stack": [
         "Node.js",
         "TypeScript",
-        "Go",
+        "NestJS",
         "AWS",
         "PostgreSQL",
+        "Drizzle ORM",
+        "MongoDB",
         "Redis",
-        "Docker",
-        "Kubernetes"
+        "Docker"
       ],
       "philosophy": "Scale or Die",
       "location": "Global",
       "status": "Available"
     },
     "heroBadges": [
-      "Backend Engineer",
+      "Software Developer",
       "Node.js",
       "AWS",
-      "Docker",
-      "Redis"
+      "PostgreSQL"
     ],
     "resumeUrl": "https://drive.google.com/file/d/1OiMRLJkQVnhNbErYbsAwlJjJVLBDcojd/view?usp=drive_link"
   },
@@ -55,7 +55,7 @@
     "title": "who_am_i",
     "subtitle": "Engineering resilient systems for the modern web.",
     "bio": "I specialize in building scalable backend architectures that handle high-concurrency traffic with ease. My approach combines the raw efficiency of system-level thinking with the flexibility of modern cloud-native technologies.",
-    "currentStatus": "Currently optimizing microservices at SCALE_TECH",
+    "currentStatus": "Architecting enterprise serverless backends & multi-platform engines at FitnEarn",
     "stats": [
       {
         "value": "1.5+",
@@ -73,8 +73,8 @@
         "highlight": false
       },
       {
-        "value": "5+",
-        "label": "modules built",
+        "value": "20+",
+        "label": "microservices & modules shipped",
         "highlight": false
       }
     ]
@@ -83,7 +83,7 @@
     "id": "02",
     "title": "technical_stack",
     "subtitle": "Core Competencies",
-    "version": "2.4.0-STABLE",
+    "version": "2.5.0-STABLE",
     "categories": [
       {
         "name": "Languages",
@@ -92,29 +92,35 @@
           "TypeScript",
           "Node.js",
           "JavaScript",
+          "SQL",
           "Java"
         ]
       },
       {
-        "name": "Infrastructure",
+        "name": "Infrastructure & ORM",
         "icon": "Database",
         "skills": [
-          "MongoDB",
-          "Express",
+          "NestJS",
+          "Drizzle ORM",
           "PostgreSQL",
+          "MongoDB",
+          "Mongoose",
+          "Express",
           "Prisma",
           "Redis"
         ]
       },
       {
-        "name": "DevOps",
+        "name": "DevOps & Cloud",
         "icon": "Cloud",
         "skills": [
-          "AWS (Lambda, S3, EC2, etc)",
-          "Docker",
+          "AWS SAM",
+          "AWS (Lambda, S3, Cognito, EventBridge, SQS)",
           "Serverless",
-          "Git",
-          "GCP (Basic)"
+          "Turborepo",
+          "Firebase (Auth, FCM)",
+          "Docker",
+          "Git"
         ]
       },
       {
@@ -136,6 +142,23 @@
     "subtitle": "Selected Projects",
     "items": [
       {
+        "id": "0x3e8a4d",
+        "title": "Swasthi — Multi-Platform Health & MealPlan Engine",
+        "description": "Architected the complete backend ecosystem for a consumer nutrition and health platform connecting 4 surfaces: Coach App, Admin Panel, Swasthi Mobile App, and Web Client. Engineered a 5-level relational hierarchy in PostgreSQL via Drizzle ORM with an automated Copy-on-Write (CoW) deep-cloning versioning engine protecting active subscribers from live mutations. Implemented dynamic mathematical macro rollups, calendar day-offset dynamic week progression with progressive content locking, self-healing checkout with account auto-registration, and FCM push notifications.",
+        "tags": [
+          "NestJS",
+          "Drizzle ORM",
+          "PostgreSQL",
+          "AWS SAM",
+          "AWS Lambda",
+          "Firebase FCM",
+          "TypeScript",
+          "Turborepo"
+        ],
+        "featured": true,
+        "liveLink": "https://play.google.com/store/apps/details?id=fit.swasthi.app&pcampaignid=web_share"
+      },
+      {
         "id": "0xf7c3a1",
         "title": "Backend SAM Infra",
         "description": "Architected and deployed a production-ready serverless backend on AWS SAM - solo. Hybrid microservices + monolith design where every feature maps to its own Lambda, enabling macro-to-micro scaling by just plugging in a new function. Includes Lambda layers for shared deps, Secrets Manager for env management across dev/prod, S3, API Gateway, EventBridge, and SQS - all wired for local, dev, and production parity.",
@@ -155,7 +178,7 @@
       },
       {
         "id": "0x9d3e81",
-        "title": "Studio(GYM) Booking System",
+        "title": "Studio - A Tri Platform Gym Booking System",
         "description": "A full-stack platform for booking gym/studio slots, consisting of a user-facing website, a dedicated mobile app for studio owners to list and manage their gyms, and an admin panel to handle users, bookings, payments, and support queries.",
         "tags": [
           "Node.js",
@@ -171,7 +194,7 @@
       {
         "id": "0x4f2a99",
         "title": "Avira.ai ",
-        "description": "A voice-based mock interview platform that generates interview sessions tailored to a candidate’s resume and job description.",
+        "description": "A voice-based mock interview platform that generates interview sessions tailored to a candidate's resume and job description.",
         "tags": [
           "Next.JS",
           "Gemini API",
@@ -209,7 +232,7 @@
         "year": "June (2025) - Present",
         "role": "Full Stack Engineer (Full-Time)",
         "company": "FitnEarn",
-        "description": "Owned and shipped the complete Studio module end-to-end - website, app, and backend - all in production. Contributed significantly across 5+ modules in both the website and admin panel. Currently leading the migration of the entire backend to a custom AWS SAM setup with a distributed microservices infrastructure designed for independent service scaling."
+        "description": "Architected and delivered the complete backend for Swasthi (consumer mobile health app) and a multi-platform MealPlan engine unifying 4 client surfaces: Coach App, Admin Panel, Swasthi Mobile, and Web Portal. Designed a 5-level hierarchical relational schema in PostgreSQL using Drizzle ORM, built an automated Copy-on-Write (CoW) version-lock engine to safeguard active subscribers, implemented a dynamic mathematical macro-propagation engine, and deployed dual-runtime microservices on AWS SAM and serverless NestJS on AWS Lambda."
       },
       {
         "year": "November (2024) - June (2025)",

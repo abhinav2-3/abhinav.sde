@@ -1,0 +1,54 @@
+# Abhinav | Backend Architect & Software Engineer
+
+> Engineering resilient systems for the modern web. Specialized in Node.js, TypeScript, AWS SAM, distributed microservices, and high-concurrency architectures.
+
+## Core Identity & Details
+- **Name**: Abhinav (Handle: `Abhinav_`)
+- **Role**: Backend Architect & Full Stack Engineer
+- **Email**: abhinavmaurya476@gmail.com
+- **GitHub**: https://github.com/abhinav2-3
+- **LinkedIn**: https://www.linkedin.com/in/abhinav-maurya-02b7b225b/
+- **Twitter / X**: https://x.com/Abhinav_2_3
+- **Resume**: https://drive.google.com/file/d/1OiMRLJkQVnhNbErYbsAwlJjJVLBDcojd/view?usp=drive_link
+
+## Key Metrics
+- **Coding Experience**: 1.5+ years of heavy production coding
+- **Commits Pushed**: 1200+
+- **Uptime Target**: 99.9%
+- **Production Modules Shipped**: 5+
+
+## Technical Stack
+- **Languages**: TypeScript, Node.js, JavaScript, Java, Go (Foundational)
+- **Infrastructure & Databases**: MongoDB, Express, PostgreSQL, Prisma, Redis
+- **Cloud & DevOps**: AWS (Lambda, SAM, S3, EC2, SQS, EventBridge, Secrets Manager), Docker, Serverless, Git, GCP (Basic)
+- **Frontend**: React, Next.js, Framer Motion, Tailwind CSS, Redux
+
+## Featured Projects
+1. **Backend SAM Infra**:
+   - Production-ready serverless backend on AWS SAM architected solo.
+   - Hybrid microservices + monolith design where each feature maps to its own Lambda.
+   - Built with Lambda layers, Secrets Manager, S3, API Gateway, EventBridge, and SQS for dev/prod parity.
+2. **Studio(GYM) Booking System**:
+   - Full-stack gym/studio booking platform (user website, owner mobile app, admin panel).
+   - Tech: Node.js, Express.js, MongoDB, AWS, Redis, Serverless.
+   - Live: https://www.fitnearn.com/
+3. **Avira.ai**:
+   - Voice-based mock interview platform generating tailored interview sessions from candidate resumes and job descriptions using Gemini API.
+   - Live: https://avira-interview-ai.vercel.app/
+   - Code: https://github.com/abhinav2-3/Avira-Interview-AI.git
+4. **PayTM Wallet**:
+   - Digital wallet for transactions, balance management, and secure payment processing.
+   - Tech: Next.js, Node.js, Express.js, PostgreSQL, Prisma.
+   - Code: https://github.com/abhinav2-3/paytm.git
+
+## Professional Timeline
+- **Full Stack Engineer (Full-Time)** at **FitnEarn** (June 2025 - Present)
+  - Shipped Studio module end-to-end (website, mobile app, backend) to production.
+  - Leading migration of backend to custom AWS SAM with distributed microservices architecture.
+- **Full Stack Engineer (Intern)** at **FitnEarn** (November 2024 - June 2025)
+  - Integrated PayU payment gateway, built e-commerce backend, and public studio listing system.
+- **Backend Developer Intern** at **Rablo** (July 2024 - November 2024)
+  - Built tutoring platform, tutor onboarding journey, search, and subscription payments.
+
+## Optional Extended Information
+- Full profile and extended details: [llms-full.txt](/llms-full.txt)

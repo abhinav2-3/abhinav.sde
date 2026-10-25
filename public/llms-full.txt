@@ -1,0 +1,42 @@
+# Abhinav | Comprehensive Engineering Dossier & Context for LLMs
+
+## Profile Overview
+- Name: Abhinav
+- Public Identifier: Abhinav_
+- Profession: Backend Architect & Full Stack Software Engineer
+- Philosophy: "Scale or Die" — engineering resilient, fault-tolerant, high-concurrency systems.
+- Contact: abhinavmaurya476@gmail.com
+- Resume: https://drive.google.com/file/d/1OiMRLJkQVnhNbErYbsAwlJjJVLBDcojd/view?usp=drive_link
+- Profiles:
+  - GitHub: https://github.com/abhinav2-3
+  - LinkedIn: https://www.linkedin.com/in/abhinav-maurya-02b7b225b/
+  - Twitter/X: https://x.com/Abhinav_2_3
+
+## Core Competencies & Deep Dives
+### Backend Architecture & Distributed Systems
+- AWS Serverless Application Model (SAM): Design and deployment of event-driven architectures leveraging AWS Lambda, API Gateway, S3, SQS, and EventBridge.
+- Microservices & Monolith Hybrid: Decoupling core business boundaries into independent functions with shared Lambda layers for dependencies and uniform secrets management.
+- Concurrency & Performance: In-memory caching with Redis, query optimization and migration management with Prisma and PostgreSQL, document modeling with MongoDB.
+
+### Full Stack & Web Engineering
+- Node.js & TypeScript: Idiomatic static typing, microservice orchestrations, resilient REST APIs.
+- Frontend: React 19, Next.js, Framer Motion, Tailwind CSS v4, smooth scroll physics with Lenis.
+- AI Integration: Multimodal voice and LLM workflows utilizing Google Gemini API for real-time interview generation.
+
+## Project Case Studies
+1. AWS SAM Serverless Backend
+   - Problem: Managing dev, staging, and production environments across individual serverless endpoints without config drift.
+   - Solution: Designed a modular AWS SAM repository with unified Lambda layers, Secrets Manager integration, and automated local parity.
+2. FitnEarn Studio Booking System
+   - Scope: Three-tier solution encompassing consumer booking app, studio owner dashboard, and back-office management.
+   - Live URL: https://www.fitnearn.com/
+3. Avira.ai Mock Interviewer
+   - Live: https://avira-interview-ai.vercel.app/
+   - Code: https://github.com/abhinav2-3/Avira-Interview-AI.git
+4. PayTM Wallet Simulation
+   - Code: https://github.com/abhinav2-3/paytm.git
+
+## Career History
+1. FitnEarn — Full Stack Engineer (June 2025 - Present)
+2. FitnEarn — Full Stack Intern (November 2024 - June 2025)
+3. Rablo — Backend Developer Intern (July 2024 - November 2024)

@@ -1,0 +1,259 @@
+{
+  "profile": {
+    "name": "Abhinav",
+    "handle": "Abhinav_",
+    "watermark": {
+      "identity": "Abhinav",
+      "role": "Backend Architect",
+      "stack": [
+        "Node.js",
+        "TypeScript",
+        "Go",
+        "AWS",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "Kubernetes"
+      ],
+      "philosophy": "Scale or Die",
+      "location": "Global",
+      "status": "Available"
+    },
+    "heroBadges": [
+      "Backend Engineer",
+      "Node.js",
+      "AWS",
+      "Docker",
+      "Redis"
+    ],
+    "resumeUrl": "https://drive.google.com/file/d/1OiMRLJkQVnhNbErYbsAwlJjJVLBDcojd/view?usp=drive_link"
+  },
+  "navigation": [
+    {
+      "id": "01",
+      "name": "about",
+      "href": "#about"
+    },
+    {
+      "id": "02",
+      "name": "skills",
+      "href": "#skills"
+    },
+    {
+      "id": "03",
+      "name": "projects",
+      "href": "#projects"
+    },
+    {
+      "id": "04",
+      "name": "contact",
+      "href": "#contact"
+    }
+  ],
+  "about": {
+    "id": "01",
+    "title": "who_am_i",
+    "subtitle": "Engineering resilient systems for the modern web.",
+    "bio": "I specialize in building scalable backend architectures that handle high-concurrency traffic with ease. My approach combines the raw efficiency of system-level thinking with the flexibility of modern cloud-native technologies.",
+    "currentStatus": "Currently optimizing microservices at SCALE_TECH",
+    "stats": [
+      {
+        "value": "1.5+",
+        "label": "years of heavy coding",
+        "highlight": true
+      },
+      {
+        "value": "1200+",
+        "label": "commits pushed",
+        "highlight": false
+      },
+      {
+        "value": "99.9%",
+        "label": "percent uptime target",
+        "highlight": false
+      },
+      {
+        "value": "5+",
+        "label": "modules built",
+        "highlight": false
+      }
+    ]
+  },
+  "skills": {
+    "id": "02",
+    "title": "technical_stack",
+    "subtitle": "Core Competencies",
+    "version": "2.4.0-STABLE",
+    "categories": [
+      {
+        "name": "Languages",
+        "icon": "Code2",
+        "skills": [
+          "TypeScript",
+          "Node.js",
+          "JavaScript",
+          "Java"
+        ]
+      },
+      {
+        "name": "Infrastructure",
+        "icon": "Database",
+        "skills": [
+          "MongoDB",
+          "Express",
+          "PostgreSQL",
+          "Prisma",
+          "Redis"
+        ]
+      },
+      {
+        "name": "DevOps",
+        "icon": "Cloud",
+        "skills": [
+          "AWS (Lambda, S3, EC2, etc)",
+          "Docker",
+          "Serverless",
+          "Git",
+          "GCP (Basic)"
+        ]
+      },
+      {
+        "name": "FrontEnd",
+        "icon": "CodeXml",
+        "skills": [
+          "React",
+          "Next.js",
+          "Framer Motion",
+          "Tailwind CSS",
+          "Redux"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "id": "03",
+    "title": "built_with_logic",
+    "subtitle": "Selected Projects",
+    "items": [
+      {
+        "id": "0xf7c3a1",
+        "title": "Backend SAM Infra",
+        "description": "Architected and deployed a production-ready serverless backend on AWS SAM - solo. Hybrid microservices + monolith design where every feature maps to its own Lambda, enabling macro-to-micro scaling by just plugging in a new function. Includes Lambda layers for shared deps, Secrets Manager for env management across dev/prod, S3, API Gateway, EventBridge, and SQS - all wired for local, dev, and production parity.",
+        "tags": [
+          "AWS SAM",
+          "Lambda",
+          "Node.js",
+          "TypeScript",
+          "Secrets Manager",
+          "API Gateway",
+          "S3",
+          "SQS",
+          "EventBridge",
+          "..."
+        ],
+        "featured": true
+      },
+      {
+        "id": "0x9d3e81",
+        "title": "Studio(GYM) Booking System",
+        "description": "A full-stack platform for booking gym/studio slots, consisting of a user-facing website, a dedicated mobile app for studio owners to list and manage their gyms, and an admin panel to handle users, bookings, payments, and support queries.",
+        "tags": [
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "AWS",
+          "Redis",
+          "Serverless",
+          "..."
+        ],
+        "liveLink": "https://www.fitnearn.com/"
+      },
+      {
+        "id": "0x4f2a99",
+        "title": "Avira.ai ",
+        "description": "A voice-based mock interview platform that generates interview sessions tailored to a candidate’s resume and job description.",
+        "tags": [
+          "Next.JS",
+          "Gemini API",
+          "MongoDB",
+          "TypeScript"
+        ],
+        "image": "https://github.com/abhinav2-3/Assets/blob/master/Screenshot%202026-03-07%20121033.png?raw=true",
+        "featured": true,
+        "liveLink": "https://avira-interview-ai.vercel.app/",
+        "githubLink": "https://github.com/abhinav2-3/Avira-Interview-AI.git"
+      },
+      {
+        "id": "0x7b1c42",
+        "title": "PayTM Wallet",
+        "description": "A digital wallet app that allows users to add and transfer money, view transaction history, and make payments using secure protocols.",
+        "tags": [
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "PostgreSQL",
+          "Prisma"
+        ],
+        "image": "https://raw.githubusercontent.com/abhinav2-3/Assets/refs/heads/master/project/PaytmWallet.jpeg",
+        "liveLink": "https://paytm-user-app-wine.vercel.app/",
+        "githubLink": "https://github.com/abhinav2-3/paytm.git"
+      }
+    ]
+  },
+  "experience": {
+    "id": "04",
+    "title": "professional_timeline",
+    "subtitle": "Career Journey",
+    "items": [
+      {
+        "year": "June (2025) - Present",
+        "role": "Full Stack Engineer (Full-Time)",
+        "company": "FitnEarn",
+        "description": "Owned and shipped the complete Studio module end-to-end - website, app, and backend - all in production. Contributed significantly across 5+ modules in both the website and admin panel. Currently leading the migration of the entire backend to a custom AWS SAM setup with a distributed microservices infrastructure designed for independent service scaling."
+      },
+      {
+        "year": "November (2024) - June (2025)",
+        "role": "Full Stack Engineer (Intern)",
+        "company": "FitnEarn",
+        "description": "Integrated PayU payment gateway for in-app transactions. Built the e-commerce backend covering both the website and admin panel. Developed the studio listing system for the public-facing website.",
+        "reverse": true
+      },
+      {
+        "year": "July (2024) - Novemeber(2024)",
+        "role": "Backend Developer Intern",
+        "company": "Rablo",
+        "description": "Built and maintained online tutoring platform for K-12 students. Implemented features like tutor onboard journey, tutor search, and subscription based payments.",
+        "isLast": true
+      }
+    ]
+  },
+  "contact": {
+    "id": "05",
+    "title": "initiate_handshake",
+    "subtitle": "Let's build something.",
+    "description": "I'm currently looking for new opportunities to solve complex technical challenges. Whether you have a question or just want to talk shop, my inbox is open.",
+    "email": "abhinavmaurya476@gmail.com",
+    "socials": [
+      {
+        "name": "github",
+        "icon": "Terminal",
+        "href": "https://github.com/abhinav2-3"
+      },
+      {
+        "name": "linkedin",
+        "icon": "Globe",
+        "href": "https://www.linkedin.com/in/abhinav28/"
+      },
+      {
+        "name": "twitter",
+        "icon": "MessageSquare",
+        "href": "https://x.com/abhinav_476"
+      }
+    ]
+  },
+  "footer": {
+    "handle": "Abhinav_",
+    "copyrightTagline": "built_with_logic",
+    "credit": "Designed & Built by Abhinav"
+  }
+}
